@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Membership</title>
+    <link rel="stylesheet" href="booking.css">
+    <style type="text/css">
+    	.back{
+    		border-radius: 70px;
+    		background-color: #4caf50;
+    		height: 60px;
+    		width:200px;
+    		position: absolute;
+    		left: 1%;
+    		top: 15%;
+    		text-align: center;
+    		color: black;
+    		cursor: pointer;
+
+    	}
+    	.back:hover{
+    		color:white;
+    		background-color: grey;
+    	}
+    </style>
+  </head>
+  <body>
+    <header> <font color="white"> <h1>All Fitness Gym</h1> </font></header>
+    <a href="index.html" target=_blank><div class="back"><h3><b>← Back to Home</b></h3></div></a>
+<div class="login-box">
+  <h1>Membership</h1>
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="text" placeholder="Enter your name" id="name">
+  </div>
+  <div class="textbox">
+    <i class="far fa-address-book"></i>
+        <input type="text" placeholder="Enter your Address" id="address">
+  </div>
+  <div class="textbox">
+    <i class="fas fa-mobile-alt"></i>
+    <input type="number" placeholder="Enter your mobile no." id="number">
+  </div>
+  <div>
+      <label> 
+Choose your service </label>
+      <select name="Service">
+        <option value="Gym"> Gym </option>
+        <option value="Zumba">  Zumba </option>
+<option value="Aerobics"> Aerobics </option>
+        </select>
+
+     </div>
+     <br>
+      <div>
+      <label> 
+Choose your timing </label>
+      <select name="time">
+        <option value="time">5:00-6:00 </option>
+        <option value="time">6:00-7:00</option>
+        <option value="time">7:00-8:00</option>
+        <option value="time">8:00-9:00</option>
+        <option value="time">9:00-10:00</option>
+        <option value="time">10:00-11:00</option>
+        <option value="time">11:00-12:00</option>
+        <option value="time">12:00-13:00</option>
+        <option value="time">13:00-14:00</option>
+        <option value="time">14:00-15:00</option>
+        <option value="time">15:00-16:00</option>
+        <option value="time">16:00-17:00</option>
+        <option value="time">17:00-18:00</option>
+        <option value="time">18:00-19:00</option>
+        </select>
+
+     </div>
+  <div>
+    <form action="thanks.html">
+     <input type="button" class="btn" value="Confirm your Membership" onclick="execute();">
+   </form>
+  </div>
+</div>
+<script type="text/javascript">
+	function execute() {
+		var nam= document.getElementById("name").value;
+		var add= document.getElementById("address").value;
+		var num= document.getElementById("number").value;
+		var pattern=/\9\8\d\d\d\d\d\d\d\d/;
+		 if (!(pattern.test(num))) {
+			alert("The number is invalid.");
+		}
+		
+		else if (nam=="")
+		{
+			alert("The name cannot be empty");
+		}
+		else if( add=="")
+		{
+			alert("The address cannot be empty");
+		}
+		else if( num=="")
+		{
+			alert("The mobile number cannot be empty");
+		}
+		else if (num.length!=10)
+		{
+			alert("Incorrect number entered");
+		}
+     
+     else{
+			alert("You are registered.");
+		}
+		
+		}
+	
+</script>
+  </body>
+</html>

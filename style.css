@@ -1,0 +1,25 @@
+.box2 {
+  margin-top: 20pt;
+}
+.box2 ul li a {
+  text-decoration: none;
+  color: white;
+}
+.box2 ul li a:hover {
+  color: #76c489;
+  transition: 0.7s;
+}
+.box2 ul li {
+  padding-left: 6em;
+  font-size: larger;
+  list-style: none;
+  float: left;
+  text-transform: uppercase;}
+
+.Bimage img{
+  width: 100%;
+  height: 200px;
+}
+h3{
+  size: 100px;
+}
